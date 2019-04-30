@@ -12,9 +12,9 @@ namespace BitcoincomREST.v2.Model
         [JsonProperty("locktime")]
         public int LockTime;
         [JsonProperty("vin")]
-        public TXInInfo[] Inputs;
+        public TxInInfo[] Inputs;
         [JsonProperty("vout")]
-        public TXOutInfo[] Outputs;
+        public TxOutInfo2[] Outputs;
         [JsonProperty("blockhash")]
         public string BlockHash;
         [JsonProperty("blockheight")]
@@ -51,14 +51,14 @@ namespace BitcoincomREST.v2.Model
         [JsonProperty("locktime")]
         public int LockTime;
         [JsonProperty("vin")]
-        public TXInInfo[] Inputs;
+        public TxInInfo[] Inputs;
         [JsonProperty("vout")]
-        public TXOutInfo[] Outputs;
+        public TxOutInfo2[] Outputs;
 
     }
 
     [JsonObject]
-    public class TXInInfo
+    public class TxInInfo
     {
         [JsonProperty("coinbase", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Coinbase;
@@ -76,7 +76,7 @@ namespace BitcoincomREST.v2.Model
     }
 
     [JsonObject]
-    public class TXOutInfo
+    public class TxOutInfo2
     {
         [JsonProperty("value")]
         public double Value;
